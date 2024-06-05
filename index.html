@@ -1,72 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(244 244 244);
+        }
+      
+      
+      
+          @font-face {
+font-family: YS5;
+font-weight: bold;
+src: url("https://cdn.glitch.global/265632e9-1614-48b8-8076-d1fb44326716/AmazonEmberDisplay_Lt.ttf?v=1717357188214")
+format("opentype");
+}
+      
+      
+      
+          @font-face {
+font-family: YS5X;
+font-weight: bold;
+src: url("https://cdn.glitch.global/265632e9-1614-48b8-8076-d1fb44326716/AmazonEmberDisplay_Bd.ttf?v=1717357186405")
+format("opentype");
+}
+      
+      
+      
+          @font-face {
+font-family: YS5XX;
+font-weight: bold;
+src: url("https://cdn.glitch.global/265632e9-1614-48b8-8076-d1fb44326716/AmazonEmberDisplay_Rg.ttf?v=1717357190597")
+format("opentype");
+}
+      
+      
+      
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 18px;
+          border: 1px solid #ece7e7;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-container img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-container h2 {
+            margin: 0 0 20px;
+              font-family: "YS5" !important;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 22px;
+          line-height:30px;
+padding-top: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          
+        }
+        .login-container .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .login-container .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
-
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
-
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+<div class="login-container">
+    <h2>Afficher mon parc défibrillateurs Cardiac Safe</h2>
+    <div class="error-message" id="error-message"></div>
+    <form id="login-form">
+        <div class="input-group">
+            <label for="username">Utilisateur</label>
+            <input type="text" id="username" name="username" required>
         </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+        <div class="input-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+
+        if (username === 'myuser1' && password === 'mypassword1') {
+            window.location.href = 'https://mylink1.com';
+        } else if (username === 'myuser2' && password === 'mypassword2') {
+            window.location.href = 'https://mylink2.com';
+        } else {
+            errorMessage.textContent = 'Identifiants invalides';
+        }
+    });
+</script>
+
+</body>
 </html>
