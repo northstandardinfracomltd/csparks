@@ -13,6 +13,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(244 244 244);
+          padding: 20px;
         }
       
       
@@ -62,13 +63,26 @@ format("opentype");
               font-family: "YS5" !important;
     font-weight: 100;
     letter-spacing: 0px;
-    font-size: 22px;
-          line-height:30px;
+    font-size: 25px;
+          line-height:42px;
+          text-align: left;
 padding-top: 20px;
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin-bottom: 40px;
           
         }
+      
+            input:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
+      }
+
+      textarea {
+        resize: none;
+      }
+      
         .login-container .input-group {
             margin-bottom: 15px;
             text-align: left;
@@ -76,13 +90,31 @@ padding-top: 20px;
         .login-container .input-group label {
             display: block;
             margin-bottom: 5px;
+              font-family: "YS5" !important;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 16px;
+padding-top: 0px;
+          padding-bottom: 10px;
+          padding-left: 0px;
         }
         .login-container .input-group input {
             width: 100%;
+          max-width: 150px;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+             border: 1px solid #ece7e7;
+            border-radius: 10px;
+                        font-family: "YS5" !important;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 16px;
         }
+      
+              .ineos {
+             max-width: 200px !important;
+        }
+      
+      
         .login-container .error-message {
             color: red;
             text-align: center;
@@ -90,13 +122,19 @@ padding-top: 20px;
         }
         .login-container button {
             width: 100%;
-            padding: 10px;
-            background-color: #28a745;
+            padding: 14px;
+            background: linear-gradient(45deg,#0092f3,#0F79AF);
             border: none;
-            border-radius: 4px;
+            border-radius: 10px;
             color: #fff;
             font-size: 16px;
             cursor: pointer;
+          
+                        font-family: "YS5" !important;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 20px;
+          margin-top:30px;
         }
         .login-container button:hover {
             background-color: #218838;
@@ -106,18 +144,18 @@ padding-top: 20px;
 <body>
 
 <div class="login-container">
-    <h2>Afficher mon parc défibrillateurs Cardiac Safe</h2>
+    <h2>Afficher mon parc défibrillateurs avec Cardiac Safe</h2>
     <div class="error-message" id="error-message"></div>
     <form id="login-form">
         <div class="input-group">
-            <label for="username">Utilisateur</label>
+            <label for="username">Mon identifiant</label>
             <input type="text" id="username" name="username" required>
-        </div>
+        </div><br>
         <div class="input-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" required>
+            <label for="password">Mon mot de passe</label>
+            <input class="ineos" type="password" id="password" name="password" required>
         </div>
-        <button type="submit">Se connecter</button>
+        <button type="submit">Connexion</button>
     </form>
 </div>
 
